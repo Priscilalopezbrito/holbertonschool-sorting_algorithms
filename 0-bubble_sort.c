@@ -6,7 +6,7 @@
  **/
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int i, j, p, temp;
+	unsigned int i, j, temp;
 
 	for (i = 0; i < size; i++)
 	{
@@ -18,16 +18,7 @@ void bubble_sort(int *array, size_t size)
 				temp = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
-				/*loop to print array after each swap*/
-				for (p = 0; p < size; p++)
-				{
-					if (p != 0)
-					{
-						printf(", ");
-					}
-					printf("%d", array[p]);
-				}
-				printf("\n");
+				print_array(array, size);
 			}
 		}
 	}
