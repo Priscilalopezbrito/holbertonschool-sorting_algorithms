@@ -63,9 +63,12 @@ void swap_int(int *a, int *b, int *array, size_t size)
 {
 	int x = *a;
 
-	*a = *b;
-	*b = x;
-	print_array(array, size);
+	if (a != b && *a != *b)
+	{
+		*a = *b;
+		*b = x;
+		print_array(array, size);
+	}
 }
 
 
