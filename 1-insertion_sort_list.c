@@ -9,13 +9,14 @@ void swap(listint_t **list, listint_t *left, listint_t *right);
  **/
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current = (*list)->next;
-	listint_t *next = current->next;
+	listint_t *current;
+	listint_t *next;
 
 	if (!list || !*list || !(*list)->next)
 	{
 		return;
 	}
+	current = (*list)->next;
 	while (current)
 	{
 		next = current->next;
